@@ -24,22 +24,12 @@ function render(searchResult) {
     for (var i = 0; i < searchResult.length; i++) {
         results.append(createItemHTML(searchResult[i]));
     }
-    $('#results').on('click',function(){
-        window.open('index.html');
-    });
 }
 
 function createItemHTML(searchItem) {
-    var div = '<div>' +
+    var div = '<div><a href="https://www.bing.com/search?q='+searchItem.Text + '" target="_blank">' +
         searchItem.Text +
-        '</div>';
+        '</a></div>';
 
     return div;
 }
-
-
-
-
-
-
-
